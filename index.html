@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Sedona</title>
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+	<div class="wrapper">
+		<header class="main-header">
+			<nav class="main-navigation">
+				<ul>
+					<li><a class="active" href="#">Информация</a></li>
+					<li><a href="#">Фото и видео</a></li>
+					<li class="logo">
+						<a href="index.html"><img src="img/logo.png" alt="Sedona" width="138" height="70"></a>
+					</li>
+					<li><a href="#">Карта штата</a></li>
+					<li><a href="hotels.html">Гостиницы</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main class="mainpage">
+			<div class="poster">
+				<div class="poster-text">
+					<img src="img/intro-sedona.png" alt="Sedona" width="458" height="78">
+				</div>
+			</div>
+			<section class="mainpage-content">
+				<div class="content-intro">
+					<h1 class="content-title">СЕДОНА — небольшой городок в Аризоне, заслуживающий большего!</h1>
+					<p class="content-info">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+				</div>
+				<div class="reasons-container">
+					<div class="column">
+						<h2 class="advantages-title">Настоящий городок</h2>
+						<span class="advantages-number">&mdash;&nbsp;&#8470;1&nbsp;&mdash;</span>
+						<p>Седона — не аттракцион для туристов, там течет&nbsp;своя жизнь</p>
+					</div>
+					<div class="column advantages-poster"><img src="img/advantages-1.jpg" alt="Sedona City" width="1600" height="800"></div>
+					<div class="column advantages-description lodging">
+						<h2 class="advantages-title">Жилье</h2>
+						<p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+					</div>
+					<div class="column advantages-description food">
+						<h2 class="advantages-title">Еда</h2>
+						<p>Всегда заказывайте фирменный бургер, вы&nbsp;не разочаруетесь!</p>
+					</div>
+					<div class="column advantages-description souvenirs">
+						<h2 class="advantages-title">Сувениры</h2>
+						<p>Не только китайского, но и местного производства!</p>
+					</div>
+					<div class="column advantages-poster"><img src="img/advantages-2.jpg" alt="Diablo Bridge" width="1600" height="800"></div>
+					<div class="column">
+						<h2 class="advantages-title">Там есть мост дьявола</h2>
+						<span class="advantages-number">&mdash;&nbsp;&#8470;2&nbsp;&mdash;</span>
+						<p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+					</div>
+					<div class="column">
+						<h2 class="advantages-title">Небольшая площадь</h2>
+						<span class="advantages-number">&mdash;&nbsp;&#8470;3&nbsp;&mdash;</span>
+						<p>Все достопримеча&shy;тельности находятся очень близко</p>
+					</div>
+					<div class="column">
+						<h2 class="advantages-title">Красивая дорога</h2>
+						<span class="advantages-number">&mdash;&nbsp;&#8470;4&nbsp;&mdash;</span>
+						<p>Ехать в седону из лас-вегаса совсем не скучно!</p>
+					</div>
+					<div class="column">
+						<h2 class="advantages-title">Мало туристов</h2>
+						<span class="advantages-number">&mdash;&nbsp;&#8470;5&nbsp;&mdash;</span>
+						<p>Большинство едет в гранд каньон и толпится там</p>
+					</div>
+				</div>
+			</section>
+			<section class="hotels-search">
+				<header class="section-header">
+					<h2 class="section-title">Заинтересовались?</h2>
+					<p class="section-info">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в седоне</p>
+				</header>
+				<a href="#" class="form-title-btn">Поиск гостиницы в Седоне</a>
+				<div class="search-form">
+					<form action="#" method="post">
+						<div class="form-group">
+							<label class="date" for="arrival">Дата заезда:</label>
+							<input type="text" name="date" id="arrival" value="24 апреля 2016">
+							<span class="icon-calendar"></span>
+						</div>
+						<div class="form-group">
+							<label class="date" for="departure">Дата выезда:</label>
+							<input type="text" name="date" id="departure" value="4 июля 2016">
+							<span class="icon-calendar"></span>
+						</div>
+						<div class="form-group">
+							<div class="half-width">
+								<label for="adult">Взрослые:</label>
+									<div class="counter-group">
+										<button class="icon-minus" onclick="modify_adult(-1)"></button>
+										<input type="text" name="count" id="adult" value="2">
+										<button class="icon-plus" onclick="modify_adult(1)"></button>
+									</div>
+							</div>
+							<div class="half-width">
+								<label for="children">Дети:</label>
+									<div class="counter-group">
+										<button class="icon-minus" onclick="modify_children(-1)"></button>
+										<input type="text" name="count" id="children"  value="0">
+										<button class="icon-plus" onclick="modify_children(1)"></button>
+									</div>
+							</div>
+						</div>
+						<input class="btn" type="submit" value="Найти">
+					</form>
+				</div>
+				<div class="map-canvas" id="map-canvas"></div>
+			</section>
+		</main>
+		<footer class="main-footer">
+			<a href="#" class="our-hash-tag">#visitsedona</a>
+			<div class="footer-sosial">
+				<a href="#" class="social-btn icon-twitter"></a>
+				<a href="#" class="social-btn icon-facebook"></a>
+				<a href="#" class="social-btn icon-youtube"></a>
+			</div>
+			<span class="developer">Website by<a class="academy-logo" href="#"></a></span>
+		</footer>
+	</div>
+	<script src="js/script.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATOFb0WJSHyMrWKZK1y3-yMxJJGABIViQ&callback=initMap"
+	async defer></script>
+</body>
+</html>
