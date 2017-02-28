@@ -10,4 +10,5 @@ build/*
 resource/*
 Thumbs.db
 less.template.mustache
+less.svg.template.mustache
 .csscomb.json
