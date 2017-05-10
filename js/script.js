@@ -35,29 +35,23 @@ function initMap() {
   });
 }
 
-function modify_adult(val) {
-	event.preventDefault();
-    var qty = document.getElementById('adult').value;
-    var new_qty = parseInt(qty,10) + val;
+search_form.addEventListener("click", function(event) {
+    var target = event.target;
+
+    if (target.tagName != 'BUTTON') return;
+   
+    event.preventDefault();
+
+    var input = target.parentNode.children[1];
+    var value = parseInt(input.value, 10);
     
-    if (new_qty < 0) {
-        new_qty = 0;
+    if (target.className == "icon-minus") {
+        value--;
+    } else value++;
+
+    if (value < 0) {
+        value = 0;
     }
     
-    document.getElementById('adult').value = new_qty;
-    return new_qty;
-}
-
-function modify_children(val) {
-	event.preventDefault();
-    var qty = document.getElementById('children').value;
-    var new_qty = parseInt(qty,10) + val;
-    
-    if (new_qty < 0) {
-        new_qty = 0;
-    }
-    
-    document.getElementById('children').value = new_qty;
-    return new_qty;
-}
-
+    input.value = value;   
+});
