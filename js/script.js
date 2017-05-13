@@ -1,15 +1,15 @@
-var form_title_btn = document.querySelector(".form-title-btn");
-var search_form = document.querySelector(".search-form");
-var calendar = search_form.querySelectorAll(".icon-calendar");
+var formTitleBtn = document.querySelector(".form-title-btn");
+var searchForm = document.querySelector(".search-form");
+var calendar = searchForm.querySelectorAll(".icon-calendar");
 
-form_title_btn.addEventListener("click", function(event) {
+formTitleBtn.addEventListener("click", function(event) {
 	event.preventDefault();
-	if (search_form.classList.contains("modal-content-show")) {
-		search_form.classList.remove("modal-content-show");
-		search_form.classList.add("modal-content-hide");
+	if (searchForm.classList.contains("modal-content-show")) {
+		searchForm.classList.remove("modal-content-show");
+		searchForm.classList.add("modal-content-hide");
 		}	else {
-			search_form.classList.add("modal-content-show");
-			search_form.classList.remove("modal-content-hide");
+			searchForm.classList.add("modal-content-show");
+			searchForm.classList.remove("modal-content-hide");
 		}
 });
 
@@ -35,7 +35,7 @@ function initMap() {
   });
 }
 
-search_form.addEventListener("click", function(event) {
+searchForm.addEventListener("click", function(event) {
     var target = event.target;
 
     if (target.tagName != 'BUTTON') return;
